@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,700');
+@import './variable.scss';
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+link {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+strike {
+  color: $textWhite100;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}

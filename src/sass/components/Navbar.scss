@@ -1,0 +1,79 @@
+@import '../variable.scss';
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  background: $bgBlack;
+  z-index: 2;
+  &__top {
+    border-bottom: 1px solid $bgBlack50;
+    padding: 10px 0;
+    h4 {
+      margin-right: auto;
+    }
+  }
+  &__body {
+    border-bottom: 1px solid $bgBlack50;
+    div > a {
+      position: relative;
+      span {
+        position: absolute;
+        top: -30%;
+        right: 0;
+        background-color: $bgRed;
+        padding: 2px;
+        color: $textWhite;
+        border-radius: 3px;
+        font-size: 12px;
+      }
+      &.btn {
+        border-color: $textWhite;
+      }
+    }
+    nav ul li {
+      margin: 0 15px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .navbar {
+    &__top {
+      display: none;
+    }
+    &__body {
+      border-bottom: none;
+      div {
+        flex-wrap: wrap;
+        a p {
+          display: none;
+        }
+      }
+      nav {
+        order: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 5px 0;
+        border-top: 1px solid $bgBlack50;
+        border-bottom: 1px solid $bgBlack50;
+        ul li {
+          margin: 0 8px;
+        }
+      }
+      div > a {
+        font-size: 20px;
+        span {
+          display: none;
+        }
+        &.btn {
+          font-size: 16px;
+          padding: 5px;
+        }
+      }
+    }
+  }
+}

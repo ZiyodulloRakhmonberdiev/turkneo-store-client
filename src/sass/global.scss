@@ -1,0 +1,47 @@
+.container {
+  max-width: 1920px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.btn {
+  border-radius: 3px;
+  background-color: transparent;
+  padding: 10px 20px;
+  transition: all 0.3s ease 0s;
+  border: 1px solid transparent;
+  outline: none;
+  cursor: pointer;
+}
+.flex {
+  display: flex;
+}
+.align-center {
+  display: flex;
+  align-items: center;
+}
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+.justify-between {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+
+@media (max-width: 760px) {
+  .container {
+    padding: 10px;
+  }
+  .btn {
+    padding: 5px 10px;
+  }
+}

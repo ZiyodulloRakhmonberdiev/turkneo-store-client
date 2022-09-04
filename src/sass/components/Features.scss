@@ -1,0 +1,52 @@
+@import '../variable.scss';
+
+.features {
+  padding: 30px 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+  &__item {
+    display: flex;
+    flex-direction: row;
+    background: $bgBlack900;
+    padding: 20px 30px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__content {
+    padding: 10px 15px;
+  }
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      color: $bgBlue;
+      font-size: 60px;
+    }
+  }
+  &__title {
+    flex: 0 0 100%;
+    color: $textWhite;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  &__subtitle {
+    color: $textWhite100;
+  }
+}
+
+@media (max-width: 770px) {
+  .features {
+    &__item {
+      flex-direction: column;
+    }
+    &__content {
+      text-align: center;
+      padding: 10px;
+    }
+  }
+}
