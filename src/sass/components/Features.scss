@@ -16,26 +16,23 @@
   }
   &__content {
     padding: 10px 15px;
+    & > h2 {
+      flex: 0 0 100%;
+      color: $textWhite;
+      text-transform: capitalize;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    & > h4 {
+      color: $textWhite100;
+    }
   }
   &__img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     svg {
       color: $bgBlue;
       font-size: 60px;
     }
-  }
-  &__title {
-    flex: 0 0 100%;
-    color: $textWhite;
-    text-transform: capitalize;
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-  &__subtitle {
-    color: $textWhite100;
   }
 }
 

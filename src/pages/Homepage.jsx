@@ -2,6 +2,7 @@ import ExtraHero from '../components/ExtraHero'
 import Features from '../components/Features'
 import Products from '../components/Products'
 import SwiperHero from '../components/SwiperHero'
+import InStock from '../components/InStock'
 import '../sass/pages/Homepage.scss'
 
 export default function App () {
@@ -18,6 +19,9 @@ export default function App () {
       </div>
       <div className='homepage__features'>
         <Features />
+      </div>
+      <div className='homepage__in-stock'>
+        <InStock />
       </div>
     </div>
   )

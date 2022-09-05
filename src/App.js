@@ -5,6 +5,7 @@ import './sass/utils.scss'
 // import './sass/swiper.scss'
 import Navbar from './components/Navbar'
 import Homepage from './pages/Homepage'
+import Footer from './components/Footer'
 
 function App () {
   return (
@@ -13,6 +14,7 @@ function App () {
       <div className='main'>
         <Homepage />
       </div>
+      <Footer />
     </div>
   )
 }

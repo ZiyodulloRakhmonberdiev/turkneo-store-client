@@ -1,3 +1,5 @@
+@import './variable.scss';
+
 .container {
   max-width: 1920px;
   padding: 0 20px;
@@ -11,6 +13,47 @@
   border: 1px solid transparent;
   outline: none;
   cursor: pointer;
+  font-size: 16px;
+}
+.btn-blue {
+  background-color: $bgBlue;
+  color: $textWhite;
+  &:hover {
+    background-color: transparent;
+    border-color: $textWhite100;
+  }
+}
+.btn-white {
+  background-color: $textWhite;
+  color: $bgBlack900;
+  &:hover {
+    border-color: $textWhite100;
+    background-color: transparent;
+    color: $textWhite;
+  }
+}
+.btn-outline {
+  background-color: $bgBlue;
+  color: $textWhite;
+  &:hover {
+    background-color: transparent;
+    border-color: $textWhite100;
+  }
+}
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1.05px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.subtitle {
+  color: #fff;
+  font-size: 16px;
+}
+.light-text {
+  color: #7e7676;
 }
 .flex {
   display: flex;

@@ -1,0 +1,95 @@
+@import '../variable.scss';
+.footer {
+  padding: 50px 30px !important;
+  background: $bgBlack900;
+  margin-top: auto;
+  &__row {
+    display: flex;
+    color: $textWhite;
+    width: 100%;
+    justify-content: space-between;
+    align-items: start;
+  }
+  &__copyright {
+    color: $textWhite100;
+    padding: 30px 0;
+    border-top: 1px solid $bgBlack50;
+    display: flex;
+  }
+  &__column {
+    width: 25%;
+    padding: 20px 0;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    span {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &__text {
+    padding-right: 40px;
+    font-weight: 300;
+    color: $textWhite100;
+  }
+  &__label {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  &__list {
+    padding-left: 0;
+  }
+  &__item {
+    margin-bottom: 10px;
+    text-align: left;
+    gap: 10px;
+  }
+  &__item-social a {
+    margin-right: 10px;
+  }
+  &__link {
+    color: $textWhite100;
+    &:hover {
+      color: $textWhite;
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .footer {
+    padding: 50px 10px !important;
+    &__row {
+      flex-wrap: wrap;
+    }
+    &__text {
+      padding-right: 10px;
+    }
+    &__column {
+      padding: 0;
+      width: 50%;
+    }
+  }
+}
+@media (max-width: 550px) {
+  .footer {
+    &__column {
+      width: 1000%;
+    }
+    &__copyright {
+      justify-content: center;
+      flex-direction: column;
+    }
+    &__currency {
+      margin-top: 15px;
+      display: flex;
+      margin-left: inherit;
+    }
+  }
+}
