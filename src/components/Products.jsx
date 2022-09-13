@@ -3,14 +3,15 @@ import axios from 'axios'
 import '../sass/components/Products.scss'
 import Product from '../components/Product'
 import SpecialDeal from '../components/SpecialDeal'
+import { publicRequest } from '../requestMethods'
 import '../sass/components/Products.scss'
+
 export default function Products () {
   const [products, setProducts] = useState([])
-
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await axios.get('http://localhost:5500/api/products')
+        const res = await publicRequest.get('/products')
         setProducts(res.data)
       } catch (err) {
         console.log(err)
@@ -22,7 +23,9 @@ export default function Products () {
   return (
     <div className='products flex'>
       <div className='products__special'>
-        <SpecialDeal />
+        {products.slice(0, 1).map(item => (
+          <SpecialDeal item={item} key={item} />
+        ))}
       </div>
       <div className='products-section'>
         <div className='products-section__controller'>
@@ -40,22 +43,16 @@ export default function Products () {
           </button>
         </div>
         <div className='products-section__container'>
-          {/* {pro flexducts.slice(0, 8).map(item => ( */}
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          {/* // <Product key={item.id} item={item} /> */}
-          {/* ))} */}
+          {products.slice(0, 8).map(item => (
+            <Product key={item.id} item={item} />
+          ))}
         </div>
       </div>
     </div>
   )
 }
 
-// import { useState, useEffect } from 'react'
+// import { useState, useEffect }from 'react'
 // import axios from 'axios'
 // import Product from './Product'
 // import '../sass/components/Products.scss'

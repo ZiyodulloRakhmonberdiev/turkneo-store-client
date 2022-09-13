@@ -1,6 +1,10 @@
+import { Link } from 'react-router-dom'
 import '../sass/components/SpecialDeal.scss'
 
-export default function SpecialDeal () {
+export default function SpecialDeal ({
+  item,
+  item: { img, title, oldPrice, newPrice, currentPrice, rating, category }
+}) {
   return (
     <div className='special-deal'>
       <div className='special-deal__title'>#Maxsus taklif</div>
@@ -8,19 +12,16 @@ export default function SpecialDeal () {
         Shoshil. Aksiya vaqti oz qoldi
       </div>
       <div className='special-deal__product-img'>
-        <img
-          src='https://res.cloudinary.com/idaproject/image/upload/v1662268075/turkneo/pexels-andrea-piacquadio-3755706_tyog1l.jpg'
-          alt=''
-        />
+        <img src={img} alt='' />
       </div>
-      <h2 className='fz-18 mb-10'>Erkaklar uchun libos</h2>
+      <h2 className='fz-18 mb-10'>{title}</h2>
       <div className='special-deal__product-price'>
-        <strike>499.000 so'm</strike>
-        <span className='fz-24 ml-10'>279.000 so'm </span>
+        {oldPrice && <strike className='mr-10'>100.000 UZS</strike>}
+        <span>{newPrice ? newPrice : currentPrice}.000 so'm</span>
       </div>
       <div className='special-deal__count-down'></div>
-      <button className='special-deal__add-to-cart-btn btn'>
-        Savatga qo'shish
+      <button className='special-deal__add-to-cart-btn btn mt-10'>
+        <Link to={`/products/${item._id}`}>Savatga qo'shish</Link>
       </button>
     </div>
   )

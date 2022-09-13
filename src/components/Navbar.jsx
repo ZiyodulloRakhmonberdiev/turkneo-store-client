@@ -1,6 +1,6 @@
 import '../sass/components/Navbar.scss'
-import React, { useState } from 'react'
-// import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../assets/img/logo.png'
 import {
   Bag,
@@ -9,11 +9,11 @@ import {
   Telegram,
   Telephone
 } from 'react-bootstrap-icons'
-// import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 export default function Navbar () {
-  // const quantity = useSelector(state => state.cart.quantity)
-  // const favorite = useSelector(state => state.favorite.quantity)
+  const quantity = useSelector(state => state.cart.quantity)
+  const favorite = useSelector(state => state.favorite.quantity)
 
   return (
     <div className='navbar'>
@@ -45,24 +45,24 @@ export default function Navbar () {
           <nav>
             <ul className='flex'>
               <li>
-                <a href='#'>Bosh sahifa</a>
+                <Link to='/'>Bosh sahifa</Link>
               </li>
               <li>
-                <a href='#'>Tovarlar</a>
+                <Link to='/products'>Tovarlar</Link>
               </li>
               <li>
-                <a href='#'>Bog'lanish</a>
+                <Link to='/contact'>Bog'lanish</Link>
               </li>
             </ul>
           </nav>
           <div className='align-center'>
-            <a href='#' className='mr-10 fz-24'>
+            <Link to={'/cart'} className='mr-10 fz-24'>
               <Bag />
-              <span>0</span>
-            </a>
+              <span>{quantity}</span>
+            </Link>
             <a href='#' className='mr-10 fz-24'>
               <Heart />
-              <span>0</span>
+              <span>{favorite}</span>
             </a>
             <a href='#' className='btn'>
               A'zo bo'lish

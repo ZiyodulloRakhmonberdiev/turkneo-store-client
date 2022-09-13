@@ -35,7 +35,7 @@ export default function SwiperHero () {
           slot='container-start'
           className='parallax-bg'
           style={{
-            'background-image':
+            backgroundImage:
               'url(https://res.cloudinary.com/idaproject/image/upload/v1662267917/turkneo/pexels-r-fera-432059_dldjkc.jpg)'
           }}
           data-swiper-parallax='-23%'

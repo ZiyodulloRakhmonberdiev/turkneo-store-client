@@ -5,7 +5,7 @@ export default function ExtraHero () {
     <div className='extra-hero gap-10'>
       <div
         style={{
-          'background-image':
+          backgroundImage:
             'url(https://res.cloudinary.com/idaproject/image/upload/v1662268082/turkneo/pexels-subhan-saad-3613388_c8awrm.jpg)'
         }}
       >
@@ -20,7 +20,7 @@ export default function ExtraHero () {
       </div>
       <div
         style={{
-          'background-image':
+          backgroundImage:
             'url(https://res.cloudinary.com/idaproject/image/upload/v1662268189/turkneo/pexels-antonio-sokic-3839432_fgokwe.jpg)'
         }}
       >
@@ -35,7 +35,7 @@ export default function ExtraHero () {
       </div>
       <div
         style={{
-          'background-image':
+          backgroundImage:
             'url(https://res.cloudinary.com/idaproject/image/upload/v1662268075/turkneo/pexels-andrea-piacquadio-3755706_tyog1l.jpg)'
         }}
       >
