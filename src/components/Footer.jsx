@@ -11,7 +11,7 @@ export default function Footer () {
             <img src={logo} alt='' />
             <span>Turkneo</span>
           </div>
-          <div className='footer__text'>
+          <div className='footer__text mb-10'>
             <p className='mb-10'>
               Endi uyingizdan chiqmasdan turib harid qilishingiz mumkin.
               O'zbekiston bo'yicha yetkazib beramiz.

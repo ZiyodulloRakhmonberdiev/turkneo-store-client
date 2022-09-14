@@ -73,6 +73,12 @@
 }
 @media (max-width: 760px) {
   .extra-hero {
-    display: none;
+    grid-template-columns: repeat(1, 1fr);
+    & > div {
+      display: none;
+      &:first-child {
+        display: block;
+      }
+    }
   }
 }

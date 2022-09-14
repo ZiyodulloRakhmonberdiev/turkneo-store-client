@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { login } from '../../redux/apiCalls'
-import './login-page.scss'
+import { Link } from 'react-router-dom'
+import { login } from '../redux/apiCalls'
+import '../sass/pages/LoginRegisterPage.scss'
 
 export default function LoginPage () {
   const [username, setUsername] = useState('')
@@ -17,7 +18,7 @@ export default function LoginPage () {
   return (
     <div className='login-page'>
       <div className='login-page__inner'>
-        <div className='login-page__title'>Kirish</div>
+        <div className='login-page__title'>A'zo bo'lish</div>
         <div className='login-page__form'>
           <label className='login-page__label'>Emailingizni kiriting *</label>
           <input
@@ -31,6 +32,10 @@ export default function LoginPage () {
             type='password'
             onChange={e => setPassword(e.target.value)}
           />
+          <label className='login-page__label'>
+            Prolingiz qaytadan kiriting *
+          </label>
+          <input className='login-page__input' type='password' />
           <label className='login-page__label' htmlFor='remember'>
             Meni eslab qol <input className='' type='checkbox' id='remember' />
           </label>
@@ -39,10 +44,10 @@ export default function LoginPage () {
             onClick={handleClick}
             disabled={isFetching}
           >
-            Kirish
+            A'zo bo'lish
           </button>
-          {error && <span>Something went wrong</span>}
-          <a href='#'>Parolingizni unutdingizmi?</a>
+          {error && <span>Xatolik yuz berdi</span>}
+          <Link to='/register'>Kirish</Link>
         </div>
       </div>
     </div>

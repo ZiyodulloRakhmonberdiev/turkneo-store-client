@@ -21,7 +21,7 @@ export default function SpecialDeal ({
       </div>
       <div className='special-deal__count-down'></div>
       <button className='special-deal__add-to-cart-btn btn mt-10'>
-        <Link to={`/products/${item._id}`}>Savatga qo'shish</Link>
+        <Link to={`/products/${item._id}`}>Ko'rish</Link>
       </button>
     </div>
   )

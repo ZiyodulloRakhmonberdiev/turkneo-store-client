@@ -1,5 +1,4 @@
 import '../sass/components/Navbar.scss'
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/img/logo.png'
 import {
@@ -64,9 +63,9 @@ export default function Navbar () {
               <Heart />
               <span>{favorite}</span>
             </a>
-            <a href='#' className='btn'>
+            <Link className='navbar__login-btn btn' to='/login'>
               A'zo bo'lish
-            </a>
+            </Link>
           </div>
         </div>
       </div>

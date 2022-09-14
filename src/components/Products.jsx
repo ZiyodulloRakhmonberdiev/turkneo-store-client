@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
 import '../sass/components/Products.scss'
 import Product from '../components/Product'
 import SpecialDeal from '../components/SpecialDeal'
@@ -11,7 +10,7 @@ export default function Products () {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await publicRequest.get('/products')
+        const res = await publicRequest.get('/products/')
         setProducts(res.data)
       } catch (err) {
         console.log(err)
@@ -21,7 +20,7 @@ export default function Products () {
   }, [])
 
   return (
-    <div className='products flex'>
+    <div className={`flex ${products.length > 0 ? 'products' : 'hidden'}`}>
       <div className='products__special'>
         {products.slice(0, 1).map(item => (
           <SpecialDeal item={item} key={item} />
@@ -43,7 +42,7 @@ export default function Products () {
           </button>
         </div>
         <div className='products-section__container'>
-          {products.slice(0, 8).map(item => (
+          {products.slice(0, 6).map(item => (
             <Product key={item.id} item={item} />
           ))}
         </div>

@@ -1,5 +1,5 @@
-import React from 'react'
-
+import { Link } from 'react-router-dom'
+import '../sass/pages/LoginRegisterPage.scss'
 export default function RegisterPage () {
   return (
     <div className='register-page'>
@@ -14,8 +14,10 @@ export default function RegisterPage () {
             Meni eslab qol
           </div>
           <input className='register-page__input' type='checkbox' />
-          <button classNames='register-page__button'>Kirish</button>
+          <button className='register-page__btn'>Kirish</button>
+          <br />
           <a href='#'>Parolingizni unutdingizmi?</a>
+          <Link to='/login'>A'zo bo'lish</Link>
         </div>
       </div>
     </div>

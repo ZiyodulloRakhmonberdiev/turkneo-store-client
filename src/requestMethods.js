@@ -1,9 +1,7 @@
 import axios from 'axios'
 
-const BASE_URL = 'http://localhost:5500/api/'
+const BASE_URL = 'https://turkneo.onrender.com/api/'
 
-// const TOKEN = JSON.parse(JSON.parse(localStorage.getItem('persist:root')).user)
-//   .currentUser.accessToken
 const TOKEN = JSON.parse(JSON.parse(localStorage.getItem('persist:root')).user)
   .currentUser.accessToken
 

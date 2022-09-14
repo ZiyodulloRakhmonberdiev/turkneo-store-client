@@ -1,24 +1,9 @@
-import { useState } from 'react'
 import { Trash } from 'react-bootstrap-icons'
 import { useSelector } from 'react-redux'
-import CartItem from '../components/CartItem'
+import { Link } from 'react-router-dom'
 import '../sass/pages/CartPage.scss'
-import cartRedux from '../redux/cartRedux'
 
 export default function CartPage () {
-  const [quantity, setQuantity] = useState(1)
-
-  // const KEY = process.env.REACT_APP_STRIPE
-  // StripeCheckout.setPublishedKey()
-
-  // quantity calculator
-  const handleQuantity = type => {
-    if (type === 'dec' && quantity > 1) {
-      setQuantity(quantity - 1)
-    } else if (type === 'inc') {
-      setQuantity(quantity + 1)
-    }
-  }
   const cart = useSelector(state => state.cart)
   return (
     <div>
@@ -28,47 +13,17 @@ export default function CartPage () {
             <div className='cart-page__products'>
               {cart.products.map(product => (
                 <div className='cart-item'>
-                  <div className='cart-item__inner'>
-                    <div className='cart-item__img'>
-                      <img src={product.img} alt='' />
-                    </div>
-                    <div className='cart-item__info'>
-                      <div className='cart-item__id'>
-                        Mahsulot ID: {product._id}
-                      </div>
-                      <div className='cart-item__title'>
-                        <span>{product.title}</span>
-                        <div className='cart-item__price'>
-                          {product.currentPrice}.000 UZS
-                        </div>
-                      </div>
-                      <div className='cart-item__size'>
-                        O'lcham:
-                        {product.size ? product.size : <span>Tanlanmagan</span>}
-                      </div>
-                    </div>
+                  <div className='cart-item__img'>
+                    <img src={product.img} alt='' />
                   </div>
-                  <div>
-                    <div className='cart-item__amount-wrapper'>
-                      <button
-                        className='cart-item__quantity-dec'
-                        onClick={() => handleQuantity('dec')}
-                      >
-                        -
-                      </button>
-                      <span className='cart-item__amount'>
-                        {product.quantity}
-                      </span>
-                      <button
-                        className='cart-item__quantity-inc'
-                        onClick={() => handleQuantity('inc')}
-                      >
-                        +
-                      </button>
-                    </div>
-                    <span className='cart-item__total-price'>
-                      {product.price * product.quantity}
-                    </span>
+                  <div className='cart-item__info'>
+                    <Link to={`/products/${product._id}`}>{product.title}</Link>
+                    <h2>{product.currentPrice}.000 UZS</h2>
+                    <p>
+                      O'lcham:
+                      {product.size ? product.size : <span>Tanlanmagan</span>}
+                    </p>
+                    <p>Mahsulot ID: {product._id}</p>
                   </div>
                   <button className='cart-item__remove btn'>
                     <Trash />
@@ -76,11 +31,20 @@ export default function CartPage () {
                 </div>
               ))}
             </div>
-            <div className='cart-page__order'>
-              <span>Jami: </span>
-              <span>568.000 so'm</span>
-              <button>Buyurtma berish</button>
-            </div>
+            {cart.products.length > 0 ? (
+              <div className='cart-page__order'>
+                <span>Jami: </span>
+                <span>568.000 so'm</span>
+                <button>Buyurtma berish</button>
+              </div>
+            ) : (
+              <h2 className='cart-page__empty'>
+                Savat bo'sh. Siz hali savatga hech nima qo'shmadingiz <br />
+                <Link to='/products' className='btn'>
+                  Savdo qilish
+                </Link>
+              </h2>
+            )}
           </div>
         </div>
       </div>

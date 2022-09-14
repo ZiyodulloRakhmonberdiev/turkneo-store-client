@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import '../sass/components/ExtraHero.scss'
 
 export default function ExtraHero () {
@@ -13,9 +14,9 @@ export default function ExtraHero () {
         <div className='extra-hero__content'>
           <h2>Shohona kiyimlar</h2>
           <h4>Erkaklar uchun liboslar to'plamimizni ko'zdan kechir</h4>
-          <a href='#' className='btn'>
-            Ko'rib chiqish
-          </a>
+          <Link to='/products' className='btn'>
+            Ko'rish
+          </Link>
         </div>
       </div>
       <div
@@ -28,9 +29,9 @@ export default function ExtraHero () {
         <div className='extra-hero__content'>
           <h4>Shoshil. Bu so'nggi hafta</h4>
           <h1>EXTRA CHEGIRMA 75%</h1>
-          <a href='#' className='btn'>
-            Ko'rib chiqish
-          </a>
+          <Link to='/products' className='btn'>
+            Ko'rish
+          </Link>
         </div>
       </div>
       <div
@@ -43,9 +44,9 @@ export default function ExtraHero () {
         <div className='extra-hero__content'>
           <h2>Top Erkaklar liboslari</h2>
           <h4>Yangi tovarlar bilan hoziroq tanishib chiq</h4>
-          <a href='#' className='btn'>
-            Ko'rib chiqish
-          </a>
+          <Link to='/products' className='btn'>
+            Ko'rish
+          </Link>
         </div>
       </div>
     </div>

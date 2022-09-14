@@ -1,11 +1,12 @@
-@import '../../sass/variables.scss';
+@import '../variable.scss';
 
-.login-page {
+.login-page,
+.register-page {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px 0;
+  padding-top: 150px;
   &__inner {
     display: flex;
     flex-direction: column;
@@ -58,6 +59,27 @@
     &:disabled {
       opacity: 0.8;
       cursor: not-allowed;
+    }
+  }
+  a {
+    display: block;
+    color: $bgBlack900;
+    &:last-child {
+      margin-top: 8px;
+      color: $bgBlue;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .login-page,
+  .register-page {
+    &__inner {
+      padding: 20px;
+    }
+    &__title {
+      font-size: 24px;
     }
   }
 }
