@@ -5,7 +5,7 @@ import SwiperHero from '../components/SwiperHero'
 import InStock from '../components/InStock'
 import '../sass/pages/Homepage.scss'
 
-export default function App () {
+export default function Home () {
   return (
     <div className='homepage container'>
       <div className='homepage__hero'>

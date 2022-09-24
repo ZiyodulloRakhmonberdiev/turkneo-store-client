@@ -19,19 +19,14 @@
       font-weight: 700;
       color: $textWhite;
     }
-    button {
-      padding: 10px 20px;
-      background-color: $bgBlack50;
-      color: $textWhite;
-      border: 1px solid transparent;
-      border-radius: 3px;
-      transition: all 0.3s ease 0s;
-      &:hover {
-        background-color: transparent;
-        color: $bgBlack900;
-        border: 1px solid $bgBlack50;
-      }
-    }
+    // button {
+    //   background-color: $bgBlack50;
+    //   color: $textWhite;
+    //   &:hover {
+    //     background-color: $textWhite;
+    //     color: $bgBlack900;
+    //   }
+    // }
   }
   &__products {
     display: grid;

@@ -4,7 +4,6 @@ const favoriteSlice = createSlice({
   name: 'favorite',
   initialState: {
     products: [],
-    quantity: 0,
     total: 0
   },
   reducers: {

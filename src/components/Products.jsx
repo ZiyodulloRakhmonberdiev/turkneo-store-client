@@ -23,7 +23,7 @@ export default function Products () {
     <div className={`flex ${products.length > 0 ? 'products' : 'hidden'}`}>
       <div className='products__special'>
         {products.slice(0, 1).map(item => (
-          <SpecialDeal item={item} key={item} />
+          <SpecialDeal item={item} key={item._id} />
         ))}
       </div>
       <div className='products-section'>
@@ -43,7 +43,7 @@ export default function Products () {
         </div>
         <div className='products-section__container'>
           {products.slice(0, 6).map(item => (
-            <Product key={item.id} item={item} />
+            <Product key={item._id} item={item} />
           ))}
         </div>
       </div>

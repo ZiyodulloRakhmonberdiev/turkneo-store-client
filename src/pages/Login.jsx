@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { login } from '../redux/apiCalls'
 import '../sass/pages/LoginRegisterPage.scss'
 
-export default function LoginPage () {
+export default function Login () {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const dispatch = useDispatch()

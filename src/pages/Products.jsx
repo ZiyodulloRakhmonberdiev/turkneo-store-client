@@ -11,7 +11,6 @@ export default function ProductsPage () {
     const getProducts = async () => {
       try {
         const res = await publicRequest.get('/products/')
-
         setProducts(res.data)
       } catch {}
     }

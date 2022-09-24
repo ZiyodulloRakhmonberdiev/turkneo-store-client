@@ -42,6 +42,7 @@ export default function SingleProduct () {
   const addToCart = () => {
     dispatch(addProduct({ ...product, quantity, size, color }))
   }
+
   //  add product to favorite (wishlist)
   const addToFavorite = () => {
     dispatch(addFavorite({ product, quantity }))
@@ -58,21 +59,17 @@ export default function SingleProduct () {
             <div className='single-product__descr'>{product.descr}</div>
             <div className='single-product__rating'></div>
             <div className='single-product__price'>
-              {product.oldPrice && (
-                <strike className='single-product__old-price'>
-                  {product.oldPrice}.000
-                </strike>
+              {product.hasStockPrice && (
+                <strike>{product.stockPrice}.000 UZS</strike>
               )}
-              <span className='single-product__new-price'>
-                {product.newPrice ? product.newPrice : product.currentPrice}.000
-                UZS
+              <span className='single-product__new-price ml-10'>
+                {product.price}.000 UZS
               </span>
             </div>
             {product.size && (
               <div className='single-product__size'>
                 O'lchamlar:
                 <select
-                  name='form[]'
                   className='single-product__select'
                   onChange={e => setSize(e.target.value)}
                 >
@@ -107,15 +104,6 @@ export default function SingleProduct () {
                 ))}
               </div>
             )}
-            {product.tags && (
-              <div className='single-product__tags flex-wrap align-center '>
-                Teglar:
-                {product.tags.map(tag => (
-                  <span key={tag}>#{tag}</span>
-                ))}
-              </div>
-            )}
-            <div className='single-product__features'></div>
             <div className='single-product__amount-wrapper'>
               <button
                 className='single-product__quantity-dec'

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import '../sass/pages/LoginRegisterPage.scss'
-export default function RegisterPage () {
+export default function Register () {
   return (
     <div className='register-page'>
       <div className='register-page__inner'>

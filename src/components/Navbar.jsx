@@ -59,10 +59,10 @@ export default function Navbar () {
               <Bag />
               <span>{quantity}</span>
             </Link>
-            <a href='#' className='mr-10 fz-24'>
+            <Link to='/favorite' className='mr-10 fz-24'>
               <Heart />
               <span>{favorite}</span>
-            </a>
+            </Link>
             <Link className='navbar__login-btn btn' to='/login'>
               A'zo bo'lish
             </Link>

@@ -1,0 +1,25 @@
+@import '../variable.scss';
+.contact {
+  padding-top: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  form {
+    width: 500px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    label {
+      margin-bottom: 5px;
+      margin-top: 20px;
+      font-size: 24px;
+    }
+    input {
+      width: 100%;
+      padding: 10px 15px;
+      color: $bgBlack900;
+      outline: none;
+    }
+  }
+}

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../sass/pages/NotFoundPage.css'
 
-export default function NotFoundPage () {
+export default function NotFound () {
   return (
     <div className='container'>
       <div className='not-found-page'>
