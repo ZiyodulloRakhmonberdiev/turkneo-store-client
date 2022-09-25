@@ -14,7 +14,10 @@ export default function Cart () {
     <div>
       <div className='container'>
         <div className='cart-page'>
-          <div className='cart-page__wrapper'>
+          <div className='products-page__header mb-10'>
+            Sizning yoqtirgan narsalaringiz
+          </div>
+          <div className='cart-page__wrapper mt-10'>
             <div className='cart-page__products'>
               {favorite.products.map(product => (
                 <div className='cart-item' key={product._id}>
@@ -25,8 +28,12 @@ export default function Cart () {
                   </div>
                   <div className='cart-item__info'>
                     <Link to={`/products/${product._id}`}>{product.title}</Link>
-                    <strike>{product.oldPrice}.000 UZS</strike>
-                    <h2>{product.currentPrice}.000 UZS</h2>
+                    {product.hasStockPrice && (
+                      <strike className='mr-10'>
+                        {product.stockPrice}.000 UZS
+                      </strike>
+                    )}
+                    <span>{product.price}.000 UZS</span>
                   </div>
                   <button
                     className='cart-item__remove btn'
