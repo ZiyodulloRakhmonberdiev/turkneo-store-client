@@ -55,12 +55,12 @@ export default function CartPage () {
                       ID: <span className='ml-5'>{product._id}</span>
                     </p>
                   </div>
-                  <button
+                  {/* <button
                     className='cart-item__remove btn'
                     onClick={handleDelete}
                   >
                     <Trash />
-                  </button>
+                  </button> */}
                 </div>
               ))}
             </div>
